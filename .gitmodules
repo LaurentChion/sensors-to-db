@@ -1,0 +1,3 @@
+[submodule "SensorsWebService"]
+	path = SensorsWebService
+	url = https://github.com/LaurentChion/SensorsWebService.git
