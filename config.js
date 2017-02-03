@@ -9,7 +9,7 @@ var logger 	= log4js.getLogger('configLogger')
 
 
 // Configure the MQTT broker
-var broker = 'mqtt://localhost';
+var broker = 'mqtt://localhost:9000';
 if(argv.broker !== undefined)
 	broker = argv.broker;
 else {
@@ -23,7 +23,7 @@ else {
 
 
 // Configure the database url
-var db = 'mongodb://localhost:27017/InternetOfStuff';
+var db = 'mongodb://mongodb:27017/InternetOfStuff';
 if(argv.db !== undefined)
 	db = argv.db;
 else
