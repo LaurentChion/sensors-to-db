@@ -9,7 +9,7 @@ var logger 	= log4js.getLogger('configLogger')
 
 
 // Configure the MQTT broker
-var broker = 'mqtt://localhost:9000';
+var broker = 'mqtt://mosca:1883';
 if(argv.broker !== undefined)
 	broker = argv.broker;
 else {
