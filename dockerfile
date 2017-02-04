@@ -10,8 +10,5 @@ COPY . /usr/src/app
 
 # Installation des dépendances
 RUN npm i
-# Notre application va tourner sur le port 8090 (on l'indique à docker)
-EXPOSE 3000
 
-# On démare l'application
-CMD ["npm", "start"]
+CMD node sensors-to-db.js
