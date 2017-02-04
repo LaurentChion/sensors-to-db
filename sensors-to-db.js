@@ -14,7 +14,7 @@ let sensors = {}
 let client = mqtt.connect(config.broker);
 
 client.on('connect', () => {
-  client.subscribe('value/#')
+  client.subscribe('#')
 })
 client.on('message', (topic, payload) => {
   payload = JSON.parse(payload)
