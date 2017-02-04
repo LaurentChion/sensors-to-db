@@ -1,9 +1,17 @@
 FROM node:6.9
-MAINTAINER MERLIN
+LABEL maintainer Laurent
 
-RUN useradd -m sensorsToDB -d /home/sensorsToDB
+# Emplacement de l'application
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-VOLUME /home/sensorsToDB
-WORKDIR /home/sensorsToDB
+# Récupération des fichiers sources
+COPY . /usr/src/app
 
-CMD ["sh","-c","npm install --reinstall; npm start"]
+# Installation des dépendances
+RUN npm i
+# Notre application va tourner sur le port 8090 (on l'indique à docker)
+EXPOSE 3000
+
+# On démare l'application
+CMD ["npm", "start"]
